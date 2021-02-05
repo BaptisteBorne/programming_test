@@ -6,6 +6,17 @@ import numpy as np
 
 
 def smallest_difference(array):
+    
+    sorted_guy=sorted(array)
+   
+    diff = 10000000
+
+    for i in range(len(array)): 
+        if sorted_guy[i+1] - sorted_guy[i] < diff: 
+            diff = sorted_guy[i+1] - sorted_guy[i]
+  
+    return diff 
+
     # Code a function that takes an array and returns the smallest
     # absolute difference between two elements of this array
     # Please note that the array can be large and that the more
